@@ -1,0 +1,46 @@
+#include <iostream>
+#include <Windows.h>
+using namespace std;
+int main() {
+	setlocale(0, "Ru");
+	bool trigger = true;
+	int password;
+
+
+	cout << "если хотите начать игру выбирете цифру 2,если вы ошиблись нажмите 1" << endl;
+	cin >> password;
+	if (password % 2 == 0)
+		cout << "добро пожаловать!" << endl;
+	else {
+		trigger = false;
+		cout << "до свидания!" << endl;
+	}
+
+	
+		int answ;
+		Sleep(5000);
+		cout << "1.продолжить 2.новая игра. 3.загрузить сохранение 4.выйти" << endl;
+		Sleep(1000);
+
+		cin >> answ;
+		switch (answ)
+		{
+		case 1:
+			cout << "вы загружаетесь возле ворот города." << endl;
+			break;
+		case 2:
+			cout << "вы точно хотите начать все заново?" << endl;
+			
+			break;
+		case 3:
+			cout << "выберите сохранение с которого хотите начать....." << endl;
+		case 4:
+			cout << "вы собираетесь выйти из игры без сохранения!" << endl;
+			Sleep(2000);
+		default:
+			cout << "увидимся=)" << endl;
+			break;
+		}
+	
+
+}
