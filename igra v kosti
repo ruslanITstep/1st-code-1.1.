@@ -1,0 +1,49 @@
+#include <iostream>
+#include <ctime>
+#include <windows.h>
+using namespace std;
+
+int main() {
+	cout << "you are in menu" << endl;
+	Sleep(1000);
+	cout << "do you want play game?" << endl;
+	Sleep(1000);
+	cout << "1.yes    2.no" << endl;
+	int answ;
+	cin >> answ;
+
+	switch (answ)
+	{
+
+	case 1:
+	{
+		cout << "ok,sit down and good luck)" << endl;
+		break;
+	}
+	case 2:
+	{
+		cout << "so,go away" << endl;
+		break;
+	}
+
+	default:
+	{
+		cout << "try again " << endl;
+		break;
+	}
+	}
+	
+	srand(time(NULL));
+	cout << "you roll the dice" << endl;
+	Sleep(3000);
+
+	int n = rand() % 12 + 1;
+	cout << n << endl;
+	if (n < 9)
+		cout << "you lost the game" << endl;
+	else if (n > 9)
+		cout << "you win" << endl;
+	else if (n == 12)
+		cout << "BINGO,congratulation.you doubled your rates" << endl;
+		return 0;
+}
