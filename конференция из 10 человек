@@ -1,0 +1,54 @@
+#include <iostream>
+using std::cout;
+using std::cin;
+using std::endl;
+const int MAX_USERS = 10; 
+void add_user(int& some_counter);
+void delete_user(int& some_counter);
+int main() {
+	int user_counter = 0; 
+	bool again = true;
+	while (again) {
+		int switch_answ;
+		cout << "Please, choose the option: " << endl;
+		cout << "1. Add user" << endl;
+		cout << "2. Delete user" << endl;
+		cout << "3. Exit" << endl;
+		cin >> switch_answ;
+		switch (switch_answ) {
+		case 1:
+			add_user(user_counter);
+			break;
+		case 2:
+			delete_user(user_counter);
+		case 3:
+			again = false;
+			break;
+		default:
+			break;
+		}
+	}
+}
+void add_user(int& some_counter) {
+	if (some_counter < 10)
+	{
+		some_counter++;
+		cout << some_counter << endl;
+		cout << "OK,+1" << endl;
+	}
+	else
+		cout << "error" << endl;
+
+
+}
+void delete_user(int& some_counter) {
+	if (some_counter > 0)
+	{
+		some_counter--;
+		cout << some_counter << endl;
+		cout << "OK,-1" << endl;
+	}
+	else
+		cout << "error" << endl;
+
+}
