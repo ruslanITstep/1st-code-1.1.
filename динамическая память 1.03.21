@@ -1,0 +1,24 @@
+#include <iostream>
+using namespace std;
+
+
+string* foo() {
+	string* hello = NULL;
+	hello = new string("hello world!");
+	return hello;
+
+}
+
+
+
+
+int main(){
+	string* hello = foo();
+	cout << *hello << endl;
+	
+	
+	
+	return 0;
+
+ }
+
