@@ -1,0 +1,27 @@
+#include <iostream>
+#include<time.h>
+using namespace std;
+
+int main(){
+
+	setlocale(0, "ru");
+	srand(time(NULL));
+	int egg = rand() % 20 + 1;
+	
+	cout << "Сходи, пожалуйста, в магазин и купи батон хлеба. Если будут яйца, то возьми десяток." << endl;
+	if (egg < 10) {
+		cout << "-я принес батон хлеба" << endl;
+		cout<<"-а где яйца?"<<endl;
+		cout<<"-какие яйца?"<<endl;
+		cout<<"а дальше совсем другая история"<<endl;
+	
+	}
+	
+else if (egg >= 10) {
+		cout << "программист возвращается с десятью батонами." << endl;
+		cout <<"-зачем нам столько хлеба?"<<endl;
+		cout<<"-Так ведь яйца были..."<<endl;
+	}
+
+
+}
